@@ -1,0 +1,78 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "backend: clean install",
+      "type": "shell",
+      "command": "mvn clean install",
+      "options": {
+        "cwd": "${workspaceFolder}/orderflow-lite-be"
+      },
+      "group": "build",
+      "problemMatcher": [
+        "$javac"
+      ]
+    },
+    {
+      "label": "backend: spring boot run",
+      "type": "shell",
+      "command": "mvn spring-boot:run -Dspring-boot.run.profiles=local",
+      "options": {
+        "cwd": "${workspaceFolder}/orderflow-lite-be"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": [
+          {
+            "regexp": "."
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*",
+          "endsPattern": ".*Started .* in .* seconds.*"
+        }
+      }
+    },
+    {
+      "label": "frontend: npm install",
+      "type": "shell",
+      "command": "npm install",
+      "options": {
+        "cwd": "${workspaceFolder}/orderflow-lite-fe"
+      },
+      "group": "build"
+    },
+    {
+      "label": "frontend: ng serve",
+      "type": "shell",
+      "command": "npm run start",
+      "options": {
+        "cwd": "${workspaceFolder}/orderflow-lite-fe"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": [
+          {
+            "regexp": "."
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*",
+          "endsPattern": ".*Compiled successfully.*|.*Application bundle generation complete.*|.*Local:.*"
+        }
+      }
+    },
+    {
+      "label": "fullstack: start all",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "backend: spring boot run",
+        "frontend: ng serve"
+      ]
+    }
+  ]
+}

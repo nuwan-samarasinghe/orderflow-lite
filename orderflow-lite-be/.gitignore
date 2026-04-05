@@ -11,9 +11,6 @@ target/
 .classpath
 .settings/
 
-# VS Code
-.vscode/
-
 # Docker files
 docker-data/
 *.pid

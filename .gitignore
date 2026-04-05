@@ -25,7 +25,6 @@ docker-data/
 # IDE FILES
 # =========================
 .idea/
-.vscode/
 *.iml
 *.ipr
 *.iws

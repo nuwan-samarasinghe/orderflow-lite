@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "orderflow-lite-be"
+    },
+    {
+      "path": "orderflow-lite-fe"
+    }
+  ],
+  "settings": {
+    "files.eol": "\n",
+    "editor.formatOnSave": true
+  }
+}

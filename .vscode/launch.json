@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug OrderFlow Backend",
+      "type": "java",
+      "request": "launch",
+      "mainClass": "com.demo.orderflow.OrderflowLiteApplication",
+      "projectName": "orderflow-lite-be",
+      "cwd": "${workspaceFolder}/orderflow-lite-be",
+      "vmArgs": "-Dspring.profiles.active=local",
+      "env": {
+        "SPRING_PROFILES_ACTIVE": "local"
+      }
+    },
+    {
+      "name": "Debug Angular Frontend (Chrome)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}/orderflow-lite-fe",
+      "preLaunchTask": "frontend: ng serve",
+      "sourceMaps": true
+    },
+    {
+      "name": "Attach to Angular Frontend (Chrome)",
+      "type": "pwa-chrome",
+      "request": "attach",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}/orderflow-lite-fe",
+      "sourceMaps": true
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug Fullstack",
+      "configurations": [
+        "Debug OrderFlow Backend",
+        "Debug Angular Frontend (Chrome)"
+      ]
+    }
+  ]
+}
