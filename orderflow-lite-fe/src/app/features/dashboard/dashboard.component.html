@@ -1,0 +1,26 @@
+<section>
+      <div class="page-header">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Signal-driven summary cards for the interview demo.</p>
+        </div>
+        <button mat-raised-button type="button" (click)="refresh()">
+          Refresh
+        </button>
+      </div>
+
+      <mat-grid-list cols="3" gutterSize="16px" rowHeight="160px">
+        @for (metric of metrics(); track metric.label) {
+          <mat-grid-tile>
+            <mat-card style="width: 100%; height: 100%">
+              <mat-card-header>
+                <mat-card-title>{{ metric.label }}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <h2>{{ metric.value }}</h2>
+              </mat-card-content>
+            </mat-card>
+          </mat-grid-tile>
+        }
+      </mat-grid-list>
+    </section>

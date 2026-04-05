@@ -1,0 +1,17 @@
+.shell-container {
+        height: 100vh;
+      }
+      .shell-nav {
+        width: 240px;
+      }
+      .brand {
+        font-weight: 700;
+        padding: 1rem;
+      }
+      .spacer {
+        flex: 1;
+      }
+      .active-link {
+        border-right: 3px solid currentColor;
+        font-weight: 600;
+      }

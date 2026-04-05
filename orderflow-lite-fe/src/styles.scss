@@ -1,62 +1,17 @@
-@use '@angular/material' as mat;
-
-@include mat.core();
-
-html {
-  color-scheme: light;
-}
-
-$theme: mat.define-theme((
-  color: (
-    theme-type: light,
-    primary: mat.$azure-palette
-  ),
-  density: (
-    scale: 0
-  ),
-  typography: (
-    brand-family: 'Roboto, Arial, sans-serif',
-    plain-family: 'Roboto, Arial, sans-serif'
-  )
-));
-
-:root {
-  @include mat.all-component-themes($theme);
-}
-
-* {
-  box-sizing: border-box;
-}
-
 html,
 body {
   height: 100%;
 }
-
 body {
   margin: 0;
-  font-family: 'Inter', Roboto, Arial, sans-serif;
-  background: #f5f7fb;
-  color: #1f2937;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.page-shell {
-  padding: 1.5rem;
+h2,
+p {
+  padding: 16px;
 }
 
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+.mr-8 {
+  margin-right: 8px;
 }

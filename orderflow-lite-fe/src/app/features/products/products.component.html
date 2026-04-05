@@ -1,0 +1,48 @@
+<section>
+      <div class="page-header">
+        <div>
+          <h1>Products</h1>
+          <p>
+            NgRx for shared state, RxJS for search, and signals for derived UI
+            state.
+          </p>
+        </div>
+      </div>
+
+      <mat-form-field appearance="outline" subscriptSizing="dynamic">
+        <mat-label>Search products</mat-label>
+        <input
+          matInput
+          [formControl]="searchControl"
+          placeholder="Search by name or SKU"
+        />
+      </mat-form-field>
+
+      @if (loading$ | async) {
+        <mat-progress-spinner mode="indeterminate" diameter="36" />
+      } @else {
+        <mat-grid-list cols="3" gutterSize="16px" rowHeight="250px">
+          @for (product of filteredProducts(); track product.id) {
+            <mat-grid-tile>
+              <mat-card style="width: 100%; height: 100%">
+                <mat-card-header>
+                  <mat-card-title>{{ product.name }}</mat-card-title>
+                  <mat-card-subtitle
+                    >{{ product.sku }} •
+                    {{ product.category }}</mat-card-subtitle
+                  >
+                </mat-card-header>
+                <mat-card-content>
+                  <p>{{ product.price | currency }}</p>
+                  <mat-chip-set>
+                    <mat-chip>{{
+                      product.active ? "Active" : "Inactive"
+                    }}</mat-chip>
+                  </mat-chip-set>
+                </mat-card-content>
+              </mat-card>
+            </mat-grid-tile>
+          }
+        </mat-grid-list>
+      }
+    </section>
