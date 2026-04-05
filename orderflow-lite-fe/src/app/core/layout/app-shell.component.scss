@@ -15,3 +15,9 @@
         border-right: 3px solid currentColor;
         font-weight: 600;
       }
+.page-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 10px;
+}

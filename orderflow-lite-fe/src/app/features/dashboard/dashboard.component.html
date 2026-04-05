@@ -1,13 +1,17 @@
 <section>
-      <div class="page-header">
+
+    <mat-grid-list cols="1" gutterSize="16px">
+        <div class="page-header">
         <div>
           <h1>Dashboard</h1>
           <p>Signal-driven summary cards for the interview demo.</p>
         </div>
-        <button mat-raised-button type="button" (click)="refresh()">
-          Refresh
-        </button>
       </div>
+    </mat-grid-list>
+    
+    <mat-grid-list cols="1" gutterSize="16px">
+      <button matButton="filled" color="primary" (click)="refresh()">Refresh</button>
+    </mat-grid-list>
 
       <mat-grid-list cols="3" gutterSize="16px" rowHeight="160px">
         @for (metric of metrics(); track metric.label) {
