@@ -1,0 +1,4 @@
+customerEmail,line1,line2,city,state,country,zipCode
+john.doe@example.com,123 Main Street,Suite 100,New York,NY,USA,10001
+john.doe@example.com,456 Oak Avenue,Apt 200,Los Angeles,CA,USA,90001
+jane.smith@example.com,789 Pine Road,,Chicago,IL,USA,60601

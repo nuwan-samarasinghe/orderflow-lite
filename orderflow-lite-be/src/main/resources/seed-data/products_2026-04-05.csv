@@ -1,0 +1,4 @@
+sku,name,description,price,category,active
+SKU-001,Laptop,High-performance laptop for professionals,999.99,Electronics,true
+SKU-002,Wireless Mouse,Ergonomic wireless mouse,29.99,Accessories,true
+SKU-003,USB-C Cable,Premium USB-C charging cable,14.99,Accessories,true

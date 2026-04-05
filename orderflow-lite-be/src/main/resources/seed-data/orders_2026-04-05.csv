@@ -1,0 +1,3 @@
+orderNumber,customerEmail,status,totalAmount
+ORD-1001,john.doe@example.com,CONFIRMED,1029.98
+ORD-1002,jane.smith@example.com,CONFIRMED,44.98

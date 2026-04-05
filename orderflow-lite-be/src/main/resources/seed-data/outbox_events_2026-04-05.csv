@@ -1,0 +1,3 @@
+aggregateType,aggregateId,eventType,payload,status
+CustomerOrder,1,OrderCreated,"{""orderId"":""ORD-1001"",""customerEmail"":""john.doe@example.com""}",PUBLISHED
+Payment,1,PaymentProcessed,"{""paymentReference"":""PAY-1001"",""status"":""SUCCESS""}",PUBLISHED

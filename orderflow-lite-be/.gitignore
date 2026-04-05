@@ -1,0 +1,20 @@
+target/
+*.log
+*.class
+
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# Docker files
+docker-data/
+*.pid
+mysql-init/

@@ -1,0 +1,70 @@
+# =========================
+# GENERAL
+# =========================
+*.log
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# =========================
+# ENV FILES
+# =========================
+.env
+.env.*
+*.local
+
+# =========================
+# DOCKER
+# =========================
+docker-data/
+*.pid
+
+# =========================
+# IDE FILES
+# =========================
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# JAVA / SPRING BOOT
+# =========================
+orderflow-lite-be/target/
+orderflow-lite-be/build/
+orderflow-lite-be/*.log
+
+# Maven wrapper logs
+orderflow-lite-be/.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# NODE / ANGULAR
+# =========================
+orderflow-lite-fe/node_modules/
+orderflow-lite-fe/dist/
+orderflow-lite-fe/.angular/
+orderflow-lite-fe/.cache/
+
+# Angular logs
+orderflow-lite-fe/npm-debug.log*
+orderflow-lite-fe/yarn-error.log*
+
+# =========================
+# TEST OUTPUT
+# =========================
+coverage/
+reports/
+
+# =========================
+# MISC
+# =========================
+*.lock

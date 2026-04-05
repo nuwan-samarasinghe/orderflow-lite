@@ -1,0 +1,5 @@
+orderNumber,productSku,quantity,unitPrice,lineTotal
+ORD-1001,SKU-001,1,999.99,999.99
+ORD-1001,SKU-002,1,29.99,29.99
+ORD-1002,SKU-002,1,29.99,29.99
+ORD-1002,SKU-003,1,14.99,14.99

@@ -1,0 +1,4 @@
+orderNumber,type,recipient,status,sentAt
+ORD-1001,ORDER_CONFIRMATION,john.doe@example.com,SENT,2026-04-05T10:01:00
+ORD-1001,PAYMENT_CONFIRMATION,john.doe@example.com,SENT,2026-04-05T10:06:00
+ORD-1002,ORDER_CONFIRMATION,jane.smith@example.com,SENT,2026-04-05T10:02:00
