@@ -22,17 +22,19 @@
       },
       "isBackground": true,
       "problemMatcher": {
-        "owner": "custom",
-        "pattern": [
-          {
-            "regexp": "."
-          }
-        ],
+        "pattern": {
+          "regexp": ""
+        },
         "background": {
           "activeOnStart": true,
           "beginsPattern": ".*",
           "endsPattern": ".*Started .* in .* seconds.*"
         }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": false
       }
     },
     {
@@ -53,17 +55,19 @@
       },
       "isBackground": true,
       "problemMatcher": {
-        "owner": "custom",
-        "pattern": [
-          {
-            "regexp": "."
-          }
-        ],
+        "pattern": {
+          "regexp": ""
+        },
         "background": {
           "activeOnStart": true,
           "beginsPattern": ".*",
           "endsPattern": ".*Compiled successfully.*|.*Application bundle generation complete.*|.*Local:.*"
         }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": false
       }
     },
     {
@@ -72,7 +76,8 @@
       "dependsOn": [
         "backend: spring boot run",
         "frontend: ng serve"
-      ]
+      ],
+      "problemMatcher": []
     }
   ]
 }

@@ -1,12 +1,27 @@
 @use '@angular/material' as mat;
 
+@include mat.core();
+
 html {
   color-scheme: light;
-  @include mat.theme((
-    color: mat.$azure-palette,
-    typography: Roboto,
-    density: 0
-  ));
+}
+
+$theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette
+  ),
+  density: (
+    scale: 0
+  ),
+  typography: (
+    brand-family: 'Roboto, Arial, sans-serif',
+    plain-family: 'Roboto, Arial, sans-serif'
+  )
+));
+
+:root {
+  @include mat.all-component-themes($theme);
 }
 
 * {

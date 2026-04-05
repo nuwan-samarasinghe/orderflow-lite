@@ -12,6 +12,7 @@
   ],
   "settings": {
     "files.eol": "\n",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "java.compile.nullAnalysis.mode": "automatic"
   }
 }

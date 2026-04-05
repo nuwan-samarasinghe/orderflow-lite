@@ -17,6 +17,7 @@ import io.swagger.v3.oas.models.servers.Server;
 
 @Configuration
 public class OpenApiConfig {
+
     @Bean
     public OpenAPI orderFlowOpenAPI() {
         return new OpenAPI()
@@ -43,4 +44,5 @@ public class OpenApiConfig {
                 .externalDocs(new ExternalDocumentation()
                         .description("Project README")
                         .url("https://example.com"));
+    }
 }
