@@ -28,3 +28,9 @@ export const productsFeature = createFeature({
   name: productsFeatureKey,
   reducer
 });
+
+// The above code defines an NgRx feature for managing products in an Angular application. 
+// It includes the state interface, reducer, and feature creation. The state includes an array of products, a loading flag, and an error message.
+// The reducer handles three actions: loading products, successfully loading products, and failing to load products. 
+// Each action updates the state accordingly, such as setting the loading flag or updating the list of products. 
+// Finally, the feature is created with a specified name and the defined reducer.

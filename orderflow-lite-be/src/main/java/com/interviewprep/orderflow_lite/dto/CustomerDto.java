@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 import com.interviewprep.orderflow_lite.entity.Address;
 import com.interviewprep.orderflow_lite.entity.Customer;
@@ -22,7 +21,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CustomerDto implements Serializable{
+public class CustomerDto implements Serializable {
+
     private UUID id;
     @NotBlank(message = "Full name is required")
     @Size(max = 120, message = "Full name must not exceed 120 characters")
@@ -48,7 +48,7 @@ public class CustomerDto implements Serializable{
                 .updatedAt(customer.getUpdatedAt() != null ? customer.getUpdatedAt().toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDateTime() : null)
                 .addresses(customer.getAddresses() != null ? customer.getAddresses().stream()
                         .map(AddressDto::fromEntity)
-                        .collect(Collectors.toList()) : null)
+                        .toList() : null)
                 .build();
     }
 
@@ -66,7 +66,7 @@ public class CustomerDto implements Serializable{
                         address.setCustomer(customer);
                         return address;
                     })
-                    .collect(Collectors.toList()));
+                    .toList());
         }
         return customer;
     }
