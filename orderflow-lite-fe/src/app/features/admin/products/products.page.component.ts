@@ -12,18 +12,18 @@ import { Store } from "@ngrx/store";
 import { debounceTime, distinctUntilChanged, startWith } from "rxjs";
 import { takeUntilDestroyed, toSignal } from "@angular/core/rxjs-interop";
 
-import { MATERIAL_IMPORTS } from "../../shared/material/material-imports";
-import { ProductsActions } from "../../store/products/products.actions";
+import { MATERIAL_IMPORTS } from "../../../shared/material/material-imports";
+import { ProductsActions } from "../../../store/products/products.actions";
 import {
   selectProducts,
   selectProductsLoading,
-} from "../../store/products/products.selectors";
+} from "../../../store/products/products.selectors";
 
 @Component({
   selector: "app-products",
   standalone: true,
   imports: [ReactiveFormsModule, AsyncPipe, CurrencyPipe, ...MATERIAL_IMPORTS],
-  templateUrl: "./products.component.html",
+  templateUrl: "./products.page.component.html",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductsComponent {

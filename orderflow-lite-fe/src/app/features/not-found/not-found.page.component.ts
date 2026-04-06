@@ -7,7 +7,7 @@ import { MATERIAL_IMPORTS } from "../../shared/material/material-imports";
   selector: "app-not-found",
   standalone: true,
   imports: [RouterLink, ...MATERIAL_IMPORTS],
-  templateUrl: "./not-found.component.html",
+  templateUrl: "./not-found.page.component.html",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NotFoundComponent {}

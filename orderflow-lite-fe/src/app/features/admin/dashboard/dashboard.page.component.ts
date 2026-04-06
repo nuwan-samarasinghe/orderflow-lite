@@ -5,13 +5,13 @@ import {
   signal,
 } from "@angular/core";
 
-import { MATERIAL_IMPORTS } from "../../shared/material/material-imports";
+import { MATERIAL_IMPORTS } from "../../../shared/material/material-imports";
 
 @Component({
   selector: "app-dashboard",
   standalone: true,
   imports: [...MATERIAL_IMPORTS],
-  templateUrl: "./dashboard.component.html",
+  templateUrl: "./dashboard.page.component.html",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardComponent {

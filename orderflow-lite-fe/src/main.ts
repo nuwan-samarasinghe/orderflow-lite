@@ -12,6 +12,7 @@ import { appReducers } from './app/store/app.reducers';
 import { ProductsEffects } from './app/store/products/products.effects';
 import { requestIdInterceptor } from './app/core/interceptors/request-id.interceptor';
 import { apiErrorInterceptor } from './app/core/interceptors/api-error.interceptor';
+import { CustomersEffects } from './app/store/customers/customer.effects';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -19,7 +20,7 @@ bootstrapApplication(AppComponent, {
     provideRouter(appRoutes, withComponentInputBinding(), withPreloading(PreloadAllModules)),
     provideHttpClient(withInterceptors([requestIdInterceptor, apiErrorInterceptor])),
     provideStore(appReducers),
-    provideEffects([ProductsEffects]),
+    provideEffects([ProductsEffects, CustomersEffects]),
     provideStoreDevtools({ maxAge: 25, logOnly: false })
   ]
 }).catch((err: unknown) => console.error(err));

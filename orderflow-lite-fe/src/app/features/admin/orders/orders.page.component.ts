@@ -2,14 +2,14 @@ import { AsyncPipe, CurrencyPipe } from "@angular/common";
 import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { toSignal } from "@angular/core/rxjs-interop";
 
-import { OrdersApiService } from "../../core/services/orders-api.service";
-import { MATERIAL_IMPORTS } from "../../shared/material/material-imports";
+import { OrdersApiService } from "../../../core/services/orders-api.service";
+import { MATERIAL_IMPORTS } from "../../../shared/material/material-imports";
 
 @Component({
   selector: "app-orders",
   standalone: true,
   imports: [AsyncPipe, CurrencyPipe, ...MATERIAL_IMPORTS],
-  templateUrl: "./orders.component.html",
+  templateUrl: "./orders.page.component.html",
   styles: [
     `
       .full-width {

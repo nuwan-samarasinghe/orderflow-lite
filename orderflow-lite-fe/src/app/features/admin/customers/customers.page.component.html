@@ -1,0 +1,27 @@
+<section>
+      <div class="page-header">
+        <div>
+          <h1>Customers</h1>
+        </div>
+      </div>
+
+      @if (loading$ | async) {
+        <mat-progress-spinner mode="indeterminate" diameter="36" />
+      } @else {
+        <mat-grid-list cols="3" gutterSize="16px" rowHeight="250px">
+          @for (customer of filteredCustomers(); track customer.id) {
+            <mat-grid-tile>
+              <mat-card style="width: 100%; height: 100%">
+                <mat-card-header>
+                  <mat-card-title>{{ customer.fullName }}</mat-card-title>
+                  <mat-card-subtitle
+                    >{{ customer.email }} •
+                    {{ customer.phone }}</mat-card-subtitle
+                  >
+                </mat-card-header>
+              </mat-card>
+            </mat-grid-tile>
+          }
+        </mat-grid-list>
+      }
+    </section>

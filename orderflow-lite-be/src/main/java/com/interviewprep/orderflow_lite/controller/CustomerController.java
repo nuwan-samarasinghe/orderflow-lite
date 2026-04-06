@@ -33,6 +33,22 @@ public class CustomerController {
 
     private final CustomerService customerService;
 
+
+    @Operation(
+            summary = "Get all customers",
+            description = "Returns a list of all customers"
+    )
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Customers found"),
+        @ApiResponse(responseCode = "404", description = "Customers not found",
+                content = @Content(schema = @Schema(implementation = ErrorDto.class)))
+    })
+    @GetMapping("")
+    public ResponseEntity<List<CustomerDto>> getAllCustomers() {
+        return ResponseEntity.ok(customerService.getAllCustomers());
+    }
+
+
     @Operation(
             summary = "Get customer by id",
             description = "Returns customer details by unique id"

@@ -17,7 +17,7 @@ export class ProductsEffects {
         // switchMap handles previous request cancellation logic, so we don't need to manually cancel previous requests
         this.productsApi.getProducts().pipe(
           // pipe transforms the Observable returned by getProducts
-          map((products) => ProductsActions.loadProductsSuccess({ products })), // map the API response to a success action
+            map((products) => ProductsActions.loadProductsSuccess({ products })), // map the API response to a success action
           catchError(
             () =>
               of(

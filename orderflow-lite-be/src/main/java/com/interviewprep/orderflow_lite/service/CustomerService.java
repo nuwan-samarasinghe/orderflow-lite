@@ -42,4 +42,8 @@ public class CustomerService {
         return CustomerDto.fromEntity(customer);
     }
 
+    public List<CustomerDto> getAllCustomers() {
+        return customerRepository.findAll().stream().map(CustomerDto::fromEntity).toList();
+    }
+
 }
