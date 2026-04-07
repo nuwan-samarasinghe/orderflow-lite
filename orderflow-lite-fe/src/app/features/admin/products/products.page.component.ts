@@ -1,4 +1,4 @@
-import { AsyncPipe, CurrencyPipe } from "@angular/common";
+import { CurrencyPipe } from "@angular/common";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -26,7 +26,7 @@ import {
 @Component({
   selector: "app-products",
   standalone: true,
-  imports: [ReactiveFormsModule, AsyncPipe, CurrencyPipe, ...MATERIAL_IMPORTS],
+  imports: [ReactiveFormsModule, CurrencyPipe, ...MATERIAL_IMPORTS],
   templateUrl: "./products.page.component.html",
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

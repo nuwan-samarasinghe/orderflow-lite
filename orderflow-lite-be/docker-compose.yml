@@ -18,5 +18,28 @@ services:
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_unicode_ci
 
+  redis:
+    image: redis:7-alpine
+    container_name: orderflow-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: orderflow-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: app_user
+      RABBITMQ_DEFAULT_PASS: app_password
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
 volumes:
   mysql_data:
