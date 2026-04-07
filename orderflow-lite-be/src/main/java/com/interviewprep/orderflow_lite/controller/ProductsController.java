@@ -2,6 +2,10 @@ package com.interviewprep.orderflow_lite.controller;
 
 import java.util.List;
 
+import org.springdoc.core.annotations.ParameterObject;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -10,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import com.interviewprep.orderflow_lite.service.ProductService;
 
 import com.interviewprep.orderflow_lite.dto.ErrorDto;
 import com.interviewprep.orderflow_lite.dto.ProductDto;
@@ -23,32 +27,31 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/v1/products")
 @Tag(name = "Products", description = "Product catalog APIs")
+@RequiredArgsConstructor
 public class ProductsController {
+
+        private final ProductService productService;
 
     @Operation(
             summary = "List products",
             description = "Returns paginated products with optional sorting and filtering"
     )
-    @Parameter(name = "page", description = "Page number", example = "0")
-    @Parameter(name = "size", description = "Page size", example = "10")
-    @Parameter(name = "sort", description = "Sort field and direction", example = "name,asc")
-    @Parameter(name = "direction", description = "Sort direction", example = "asc")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Products returned"),
                 @ApiResponse(responseCode = "400", description = "Invalid pagination or sorting parameters",
                         content = @Content(schema = @Schema(implementation = ErrorDto.class)))
     })
     @GetMapping("")
-    public ResponseEntity<List<ProductDto>> allProducts(
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size,
-            @RequestParam(defaultValue = "name") String sort,
-            @RequestParam(defaultValue = "asc") String direction) {
-        return ResponseEntity.ok(null);
+    public Page<ProductDto> allProducts(
+        @ParameterObject
+            @PageableDefault(page = 0, size = 10, sort = "name")
+        Pageable pageable) {
+        return productService.getAllProducts(pageable);
     }
 
     @Operation(

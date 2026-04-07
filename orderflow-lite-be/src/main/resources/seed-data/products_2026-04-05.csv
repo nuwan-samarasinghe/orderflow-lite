@@ -2,3 +2,103 @@ sku,name,description,price,category,active
 SKU-001,Laptop,High-performance laptop for professionals,999.99,Electronics,true
 SKU-002,Wireless Mouse,Ergonomic wireless mouse,29.99,Accessories,true
 SKU-003,USB-C Cable,Premium USB-C charging cable,14.99,Accessories,true
+SKU-004,Mechanical Keyboard,Backlit mechanical keyboard with RGB lighting,79.99,Accessories,true
+SKU-005,Gaming Headset,Surround sound gaming headset with mic,59.99,Accessories,true
+SKU-006,Smartphone,Latest model smartphone with OLED display,799.99,Electronics,true
+SKU-007,Tablet,10-inch tablet for work and entertainment,399.99,Electronics,true
+SKU-008,External Hard Drive,1TB portable external hard drive,59.99,Accessories,true
+SKU-009,Monitor 24 inch,Full HD 24-inch monitor,149.99,Electronics,true
+SKU-010,Monitor 27 inch,4K UHD 27-inch monitor,329.99,Electronics,true
+SKU-011,Bluetooth Speaker,Portable Bluetooth speaker with deep bass,49.99,Electronics,true
+SKU-012,Webcam HD,1080p HD webcam for video calls,39.99,Accessories,true
+SKU-013,Laptop Stand,Adjustable aluminum laptop stand,34.99,Accessories,true
+SKU-014,Wireless Charger,Fast wireless charging pad,24.99,Accessories,true
+SKU-015,Power Bank,10000mAh portable power bank,29.99,Accessories,true
+SKU-016,Noise Cancelling Headphones,Over-ear active noise cancelling headphones,199.99,Electronics,true
+SKU-017,Smartwatch,Fitness tracking smartwatch with heart rate monitor,149.99,Electronics,true
+SKU-018,Keyboard and Mouse Combo,Wireless keyboard and mouse combo,49.99,Accessories,true
+SKU-019,USB Hub,Multi-port USB 3.0 hub,19.99,Accessories,true
+SKU-020,Graphics Tablet,Digital drawing tablet with stylus,89.99,Electronics,true
+SKU-021,Router WiFi 6,High-speed WiFi 6 router,129.99,Electronics,true
+SKU-022,Microphone USB,Studio-quality USB microphone,79.99,Accessories,true
+SKU-023,LED Desk Lamp,Dimmable LED desk lamp with USB port,29.99,Accessories,true
+SKU-024,Portable SSD,500GB high-speed portable SSD,99.99,Electronics,true
+SKU-025,VR Headset,Virtual reality headset for immersive gaming,299.99,Electronics,true
+SKU-026,Drone Camera,Compact drone with 4K camera,499.99,Electronics,true
+SKU-027,Smart Home Hub,Central hub for smart home devices,99.99,Electronics,true
+SKU-028,Action Camera,Waterproof 4K action camera,149.99,Electronics,true
+SKU-029,Earbuds Wireless,True wireless earbuds with charging case,59.99,Accessories,true
+SKU-030,Car Charger USB,Dual-port USB car charger,14.99,Accessories,true
+SKU-031,HDMI Cable,High-speed HDMI cable 2m,12.99,Accessories,true
+SKU-032,Desk Mat,Large non-slip desk mat,19.99,Accessories,true
+SKU-033,Ergonomic Chair,Comfortable ergonomic office chair,199.99,Furniture,true
+SKU-034,Standing Desk,Height adjustable standing desk,299.99,Furniture,true
+SKU-035,Office Desk,Modern office desk with storage,249.99,Furniture,true
+SKU-036,PC Case,Mid-tower PC case with RGB fans,89.99,Electronics,true
+SKU-037,CPU Cooler,High-performance air CPU cooler,49.99,Electronics,true
+SKU-038,Graphics Card,Latest generation gaming GPU,699.99,Electronics,true
+SKU-039,RAM 16GB,16GB DDR4 memory kit,79.99,Electronics,true
+SKU-040,RAM 32GB,32GB DDR4 memory kit,149.99,Electronics,true
+SKU-041,Motherboard ATX,ATX motherboard for gaming PCs,179.99,Electronics,true
+SKU-042,SSD 1TB,1TB internal solid state drive,119.99,Electronics,true
+SKU-043,SSD 2TB,2TB internal solid state drive,199.99,Electronics,true
+SKU-044,Keyboard Wireless,Slim wireless keyboard,39.99,Accessories,true
+SKU-045,Mouse Gaming,High precision gaming mouse,49.99,Accessories,true
+SKU-046,Mouse Pad RGB,RGB gaming mouse pad,29.99,Accessories,true
+SKU-047,Headphone Stand,Aluminum headphone stand,19.99,Accessories,true
+SKU-048,USB Flash Drive 64GB,64GB USB 3.0 flash drive,14.99,Accessories,true
+SKU-049,USB Flash Drive 128GB,128GB USB 3.0 flash drive,19.99,Accessories,true
+SKU-050,Smart Plug,WiFi-enabled smart plug,24.99,Electronics,true
+SKU-051,Security Camera,Indoor smart security camera,79.99,Electronics,true
+SKU-052,Smart Bulb,Color changing smart LED bulb,19.99,Electronics,true
+SKU-053,Projector Mini,Portable mini projector,149.99,Electronics,true
+SKU-054,Projector 4K,4K home theater projector,599.99,Electronics,true
+SKU-055,Soundbar,Home theater soundbar system,199.99,Electronics,true
+SKU-056,Subwoofer,Wireless subwoofer for deep bass,149.99,Electronics,true
+SKU-057,Streaming Stick,4K streaming media stick,49.99,Electronics,true
+SKU-058,TV 50 inch,50-inch 4K smart TV,499.99,Electronics,true
+SKU-059,TV 65 inch,65-inch 4K smart TV,799.99,Electronics,true
+SKU-060,Laptop Backpack,Water-resistant laptop backpack,39.99,Accessories,true
+SKU-061,Camera DSLR,Professional DSLR camera,999.99,Electronics,true
+SKU-062,Lens 50mm,50mm prime camera lens,199.99,Electronics,true
+SKU-063,Tripod Stand,Adjustable camera tripod,49.99,Accessories,true
+SKU-064,Memory Card 64GB,64GB SD card for cameras,14.99,Accessories,true
+SKU-065,Memory Card 128GB,128GB SD card for cameras,24.99,Accessories,true
+SKU-066,Photo Printer,Compact photo printer,129.99,Electronics,true
+SKU-067,Scanner,High-resolution document scanner,99.99,Electronics,true
+SKU-068,Printer Inkjet,All-in-one inkjet printer,149.99,Electronics,true
+SKU-069,Printer Laser,High-speed laser printer,249.99,Electronics,true
+SKU-070,Paper Shredder,Cross-cut paper shredder,79.99,Accessories,true
+SKU-071,Label Maker,Portable label maker device,39.99,Accessories,true
+SKU-072,Desk Organizer,Multi-compartment desk organizer,19.99,Accessories,true
+SKU-073,Whiteboard,Magnetic whiteboard with markers,49.99,Accessories,true
+SKU-074,Calendar Digital,Digital desk calendar display,29.99,Accessories,true
+SKU-075,Smart Thermostat,WiFi smart thermostat,199.99,Electronics,true
+SKU-076,Air Purifier,HEPA air purifier for home,149.99,Electronics,true
+SKU-077,Humidifier,Ultrasonic cool mist humidifier,49.99,Electronics,true
+SKU-078,Electric Kettle,Fast boiling electric kettle,39.99,Home Appliances,true
+SKU-079,Coffee Maker,Automatic drip coffee maker,79.99,Home Appliances,true
+SKU-080,Blender,High-speed kitchen blender,69.99,Home Appliances,true
+SKU-081,Toaster,2-slice stainless steel toaster,29.99,Home Appliances,true
+SKU-082,Microwave Oven,Compact microwave oven,99.99,Home Appliances,true
+SKU-083,Air Fryer,Oil-free air fryer cooker,119.99,Home Appliances,true
+SKU-084,Vacuum Cleaner,Cordless vacuum cleaner,199.99,Home Appliances,true
+SKU-085,Robot Vacuum,Smart robot vacuum cleaner,299.99,Home Appliances,true
+SKU-086,Hair Dryer,Professional hair dryer,39.99,Personal Care,true
+SKU-087,Electric Toothbrush,Rechargeable electric toothbrush,59.99,Personal Care,true
+SKU-088,Shaver Electric,Men's electric shaver,79.99,Personal Care,true
+SKU-089,Fitness Tracker,Basic fitness activity tracker,49.99,Electronics,true
+SKU-090,Treadmill,Folding treadmill for home workouts,499.99,Fitness,true
+SKU-091,Dumbbell Set,Adjustable dumbbell set,99.99,Fitness,true
+SKU-092,Yoga Mat,Non-slip yoga exercise mat,19.99,Fitness,true
+SKU-093,Resistance Bands,Set of resistance training bands,24.99,Fitness,true
+SKU-094,Bike Helmet,Protective cycling helmet,49.99,Sports,true
+SKU-095,Camping Tent,2-person lightweight camping tent,129.99,Outdoor,true
+SKU-096,Sleeping Bag,All-season sleeping bag,59.99,Outdoor,true
+SKU-097,Flashlight LED,High-lumen LED flashlight,19.99,Outdoor,true
+SKU-098,Portable Stove,Compact camping stove,39.99,Outdoor,true
+SKU-099,Cooler Box,Insulated cooler box for travel,49.99,Outdoor,true
+SKU-100,Travel Adapter,Universal travel power adapter,19.99,Accessories,true
+SKU-101,Luggage Suitcase,Durable carry-on suitcase,89.99,Travel,true
+SKU-102,Travel Pillow,Memory foam travel neck pillow,19.99,Travel,true
+SKU-103,Smart Scale,Bluetooth body weight scale,39.99,Electronics,true

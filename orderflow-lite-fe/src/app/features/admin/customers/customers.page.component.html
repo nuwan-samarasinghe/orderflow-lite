@@ -9,7 +9,7 @@
         <mat-progress-spinner mode="indeterminate" diameter="36" />
       } @else {
         <mat-grid-list cols="3" gutterSize="16px" rowHeight="250px">
-          @for (customer of filteredCustomers(); track customer.id) {
+          @for (customer of customers(); track customer.id) {
             <mat-grid-tile>
               <mat-card style="width: 100%; height: 100%">
                 <mat-card-header>

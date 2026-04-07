@@ -12,6 +12,8 @@ import { MatTableModule } from "@angular/material/table";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatDividerModule } from "@angular/material/divider";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatSortModule } from "@angular/material/sort";
 
 export const MATERIAL_IMPORTS = [
   MatButtonModule,
@@ -28,4 +30,6 @@ export const MATERIAL_IMPORTS = [
   MatChipsModule,
   MatGridListModule,
   MatDividerModule,
+  MatPaginatorModule,
+  MatSortModule,
 ] as const;

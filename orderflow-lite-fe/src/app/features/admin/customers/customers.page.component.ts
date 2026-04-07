@@ -1,11 +1,5 @@
 import { AsyncPipe } from "@angular/common";
-import {
-  ChangeDetectionStrategy,
-  Component,
-  DestroyRef,
-  inject,
-  computed,
-} from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { Store } from "@ngrx/store";
 import { toSignal } from "@angular/core/rxjs-interop";
@@ -26,18 +20,11 @@ import {
 })
 export class CustomersComponent {
   private readonly store = inject(Store);
-  private readonly destroyRef = inject(DestroyRef);
 
-  protected readonly loading$ = this.store.select(selectCustomersLoading);
-  private readonly customerSignal = toSignal(
-    this.store.select(selectCustomers),
-    { initialValue: [] },
-  );
+  loading$ = this.store.select(selectCustomersLoading); // asyncpipe is used to subscribe to this observable in the template loading$ | async is doing that
 
-  protected readonly filteredCustomers = computed(() => {
-    const customers = this.customerSignal();
-    // Add filtering logic here if needed
-    return customers;
+  protected readonly customers = toSignal(this.store.select(selectCustomers), {
+    initialValue: [],
   });
 
   constructor() {

@@ -13,11 +13,11 @@ export class ProductsEffects {
   readonly loadProducts$ = createEffect(() =>
     this.actions$.pipe(
       ofType(ProductsActions.loadProducts), // Listen for the 'Load Products' action
-      switchMap(() =>
+      switchMap(({ query }) =>
         // switchMap handles previous request cancellation logic, so we don't need to manually cancel previous requests
-        this.productsApi.getProducts().pipe(
+        this.productsApi.getProducts(query).pipe(
           // pipe transforms the Observable returned by getProducts
-            map((products) => ProductsActions.loadProductsSuccess({ products })), // map the API response to a success action
+            map((pageResponses) => ProductsActions.loadProductsSuccess({ pageResponses })), // map the API response to a success action
           catchError(
             () =>
               of(

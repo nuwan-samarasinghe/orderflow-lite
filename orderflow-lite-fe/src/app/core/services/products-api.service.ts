@@ -1,48 +1,25 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable, inject } from "@angular/core";
 import { Observable, of } from "rxjs";
-
-export interface ProductVm {
-  id: number;
-  sku: string;
-  name: string;
-  category: string;
-  price: number;
-  active: boolean;
-}
+import { environment } from "../../../environments/environment";
+import { ProductDto } from "../dtos/product.dto";
+import { PagedRequestDto, PageResponseDto } from "../dtos/paged.dto";
 
 @Injectable({ providedIn: "root" })
 export class ProductsApiService {
   private readonly http = inject(HttpClient);
-  private readonly apiUrl = "/api/v1/products";
+  private readonly apiUrl = `${environment.apiDomain}/api/v1/products`;
 
-  getProducts(): Observable<ProductVm[]> {
-    return of([
-      {
-        id: 101,
-        sku: "SKU-1001",
-        name: "Ergonomic Chair",
-        category: "Furniture",
-        price: 199.99,
-        active: true,
-      },
-      {
-        id: 102,
-        sku: "SKU-1002",
-        name: "Standing Desk",
-        category: "Furniture",
-        price: 499.0,
-        active: true,
-      },
-      {
-        id: 103,
-        sku: "SKU-1003",
-        name: "Noise Cancelling Headset",
-        category: "Electronics",
-        price: 149.5,
-        active: false,
-      },
-    ]);
-    // return this.http.get<ProductVm[]>(this.apiUrl);
+  getProducts(
+    request: PagedRequestDto,
+  ): Observable<PageResponseDto<ProductDto>> {
+    let params = new HttpParams()
+      .set("page", request.page)
+      .set("size", request.size);
+
+    if (request.sort) {
+      params = params.set("sort", request.sort);
+    }
+    return this.http.get<PageResponseDto<ProductDto>>(this.apiUrl, { params });
   }
 }
